@@ -59,4 +59,32 @@ public final class CourseToolkit {
         }
         return sum / values.length;
     }
+
+    public static int min(int[] values) {
+        if (values == null || values.length == 0) {
+            throw new IllegalArgumentException("значения не могут быть нулевыми и пустыми");    
+        }
+
+        int min = values [0];
+        for (int i = 1; i < values.length; i++) {
+            if (values[i] < min) {
+                min = values[i];
+            }
+        }
+        return min;
+    }
+
+    public static int max(int[] values) {
+        if (values == null || values.length == 0) {
+            throw new IllegalArgumentException("значения не могут быть нулевыми и пустыми");    
+        }
+
+        int max = values [0];
+        for (int i = 1; i < values.length; i++) {
+            if (values[i] > max) {
+                max = values[i];
+            }
+        }
+        return max;
+    }
 }
