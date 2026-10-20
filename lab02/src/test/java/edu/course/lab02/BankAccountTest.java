@@ -25,7 +25,7 @@ public class BankAccountTest {
 
     @Test void withdrawingMoreThanBalance() {
         BankAccount account = new BankAccount(50);
-        assertThrows(IllegalArgumentException.class, () -> account.withdrawy(100));
+        assertThrows(IllegalArgumentException.class, () -> account.withdraw(100));
     }
 
     @Test
@@ -34,6 +34,6 @@ public class BankAccountTest {
         assertThrows(IllegalArgumentException.class, () -> account.deposit(-15));
     }
 
-    
+
     
 }
